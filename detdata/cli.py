@@ -1,14 +1,17 @@
 import os
 import begin
-from mxio import csv_to_mxrecords, json_labels_to_csv
+from detdata.mxio import csv_to_mxrecords, json_labels_to_csv
 
 
 @begin.start
-def main(action: 'Action: one of [parse_coco_like,]' = 'parse_coco_like',
-         coco_labels_dir: 'dir to coco-like ds' = '.',
-         out_path: 'target path' = ''):
+def main(action: 'Action: one of [parse_coco_like,]' = None,
+         coco_labels_dir: 'dir to coco-like ds' = None,
+         out_path: 'target path' = None):
 
     """Run parsing json labels"""
+
+    print(action)
+    print(coco_labels_dir)
 
     if action == 'parse_coco_like':
         csv_out = os.path.join(out_path, 'dataset_{}.csv')

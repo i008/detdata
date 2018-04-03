@@ -5,7 +5,7 @@
 
 from setuptools import setup, find_packages
 
-with open('README.rst') as readme_file:
+with open('README.MD') as readme_file:
     readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
@@ -35,7 +35,7 @@ setup(
     description="Tool to work with object detection data",
     entry_points={
         'console_scripts': [
-            'detdata=detdata.cli:main',
+            'detparse=detdata.cli:main.start',
         ],
     },
     install_requires=requirements,

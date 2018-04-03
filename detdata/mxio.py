@@ -130,7 +130,7 @@ def csv_to_mxrecords(labels_csv, base_path, output_path='.'):
     csv schema: ['class_name[str]','fname[str]', 'xmin','ymin','xmax','ymax']
 
     :param labels_csv: csv file with ['class_name[str]','fname[str]', 'xmin','ymin','xmax','ymax']
-    :param base_path: Path to where fnames resides in filesystem.
+    :param base_path: Path to where fnames resids in filesystem.
     :param output_path: where to write the mxrecord file
     :return:
     """
