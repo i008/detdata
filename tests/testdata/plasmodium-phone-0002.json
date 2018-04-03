@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "plasmodium-phone-0002",
+    "num_boxes": 12
+  },
+  "boxes": {
+    "box 1": {
+      "illness": "Malaria",
+      "xmin": 278.3631,
+      "ymin": 267.9464,
+      "xmax": 318.3631,
+      "ymax": 307.9464
+    },
+    "box 2": {
+      "illness": "Malaria",
+      "xmin": 256.0417,
+      "ymin": 241.1607,
+      "xmax": 296.0417,
+      "ymax": 281.1607
+    },
+    "box 3": {
+      "illness": "Malaria",
+      "xmin": 367.6488,
+      "ymin": 50.6845,
+      "xmax": 407.6488,
+      "ymax": 90.6845
+    },
+    "box 4": {
+      "illness": "Malaria",
+      "xmin": 375.0893,
+      "ymin": 334.9107,
+      "xmax": 415.0893,
+      "ymax": 374.9107
+    },
+    "box 5": {
+      "illness": "Malaria",
+      "xmin": 203.9583,
+      "ymin": 400.3869,
+      "xmax": 243.9583,
+      "ymax": 440.3869
+    },
+    "box 6": {
+      "illness": "Malaria",
+      "xmin": 573.006,
+      "ymin": 306.6369,
+      "xmax": 613.006,
+      "ymax": 348.125
+    },
+    "box 7": {
+      "illness": "Malaria",
+      "xmin": 550.6845,
+      "ymin": 404.8512,
+      "xmax": 590.6845,
+      "ymax": 444.8512
+    },
+    "box 8": {
+      "illness": "Malaria",
+      "xmin": 540.2679,
+      "ymin": 104.256,
+      "xmax": 580.2679,
+      "ymax": 144.256
+    },
+    "box 9": {
+      "illness": "Malaria",
+      "xmin": 452.4702,
+      "ymin": 556.6369,
+      "xmax": 492.4702,
+      "ymax": 598.125
+    },
+    "box 10": {
+      "illness": "Malaria",
+      "xmin": 328.9583,
+      "ymin": 154.8512,
+      "xmax": 368.9583,
+      "ymax": 194.8512
+    },
+    "box 11": {
+      "illness": "Malaria",
+      "xmin": 308.125,
+      "ymin": 547.7083,
+      "xmax": 348.125,
+      "ymax": 587.7083
+    },
+    "box 12": {
+      "illness": "Malaria",
+      "xmin": 616.1607,
+      "ymin": 114.6726,
+      "xmax": 656.1607,
+      "ymax": 154.6726
+    }
+  }
+}
