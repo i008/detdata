@@ -1,5 +1,6 @@
-#### Create an index-csv for a coco-like json object detection dataset and write it to mxnet-records
 ![alt text](https://api.travis-ci.org/i008/detdata.svg "Logo Title Text 1")
+
+#### Create an index-csv for a coco-like json object detection dataset and write it to mxnet-records
 
 get help:
 ```bash
