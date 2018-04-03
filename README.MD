@@ -1,6 +1,5 @@
-
-
 #### Create an index-csv for a coco-like json object detection dataset and write it to mxnet-records
+![[Build Status](https://travis-ci.org/i008/detdata.svg?branch=master)](https://travis-ci.org/i008/detdata)
 
 get help:
 ```bash
@@ -26,5 +25,4 @@ tree /home/i008/data/
 └── dataset_valid.mxrecords
 
 ```
-
 
