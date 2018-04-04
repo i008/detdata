@@ -11,7 +11,7 @@ python detdata/cli.py --help
 example usage:
 
 ```bash
-python detdata/cli.py --action parse_coco --coco-labels-dir /home/i008/googledrive/Projects/AiScope/malaria_dataset --out-path /home/i008/data
+python detdata/cli.py parse_coco --coco-labels-dir /home/i008/googledrive/Projects/AiScope/malaria_dataset --out-path /home/i008/data
 
 ```
 This will result in the following files beeing created:
@@ -29,7 +29,10 @@ tree /home/i008/data/
 
 #### Create mxrecords and mxindex file from a csv
 
+```bash
+python detdata/cli.py csv_to_mxindex
 
+```
 
 
 #### Basic usage - raw geneator
@@ -59,3 +62,27 @@ class_id  xmin  ymin  xmax  ymax
  [   0.  111.  619.  151.  659.]]
 
 ```
+
+
+#### Basic usage - augmented generator
+
+You can use imgaug (https://github.com/aleju/imgaug) as your augmentation engine
+you can find its documentation here: http://imgaug.readthedocs.io/en/latest/
+
+```python
+
+import imgaug as ia
+from imgaug import augmenters as iaa
+
+# create a dummy seqiantial imgaug.augmenter
+dummy_augmenter = iaa.Sequential([iaa.Noop()])
+aug_generator = detdata.get_augmenting_generator(augmenter=dummy_augmenter)
+images, bbs_on_image, classes  = next(aug_generator)
+```
+
+bbs_on_image contains a list of imgaug.imgaug.BoundingBoxesOnImage objects.
+
+
+
+
+

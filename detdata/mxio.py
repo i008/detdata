@@ -30,7 +30,7 @@ def json_labels_to_csv(
     :param dataset_path: Path to coco-like dataset (each pic has a json label file)
     :param output_csv_file:
     :param output_format: order of the columns in the csv-file
-    defaults to: ['class_name', 'fname', 'xmin', 'ymin', 'xmax', 'ymax']
+    defaults to: ['class_name', 'fname', 'xmin', 'ymin', 'xmax', 'ymax', 'im_rows','im_cols','image_id']
     :param val_split: frac=0..1 size of validation data split
     :param shuffle:
     :return:
