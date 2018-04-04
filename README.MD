@@ -27,6 +27,11 @@ tree /home/i008/data/
 
 ```
 
+#### Create mxrecords and mxindex file from a csv
+
+
+
+
 #### Basic usage - raw geneator
 
 This will yield list of the length of the batch size specified.  With not processed images and
@@ -47,7 +52,7 @@ list_images, list_bboxes = next(raw_generator)
 print('class_id--xmin--ymin--xmax--ymax')
 print(list_bboxes[0])
 
-class_id--xmin--ymin--xmax--ymax
+class_id  xmin  ymin  xmax  ymax
 [[   0.  190.  502.  230.  542.]
  [   0.   16.  261.   56.  301.]
  [   0.  221.  475.  261.  515.]

@@ -1,18 +1,20 @@
-from detdata.mxio import json_labels_to_csv, csv_to_mxrecords
-import pandas as pd
-import glob
 import os
-import pytest
-import mxnet
-from .conftest import base_path, tr_csv, val_csv
+import pathlib
+
+import pandas as pd
+
+from detdata.mxio import json_labels_to_csv
+from .conftest import base_path, tr_csv, val_csv, template_path, testdata
 
 
 def test_coco_json_labels_to_csv():
-    json_labels_to_csv(os.path.join(base_path, 'testdata'), output_csv_file=os.path.join(base_path, 'test_x_{}.csv'),
+    json_labels_to_csv(testdata, output_csv_file=template_path,
                        val_split=0.0, shuffle=False)
     df = pd.read_csv(os.path.join(base_path, 'test_x_train.csv'))
 
-    fns = [a.split(os.sep)[-1] for a in list(glob.glob(os.path.join(base_path, 'testdata/*.jpg')))]
+    all_images = list(pathlib.Path(testdata).glob('*.jpg'))
+
+    fns = [a.name for a in all_images]
 
     assert set(df.fname.tolist()) == set(fns)
 

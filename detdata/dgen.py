@@ -7,7 +7,7 @@ import pandas as pd
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
-
+logger.disabled = True
 
 class DetGen:
     """

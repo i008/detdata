@@ -10,23 +10,25 @@ from detdata.mxio import csv_to_mxrecords, json_labels_to_csv
 base_path = os.path.dirname(os.path.realpath(__file__))
 tr_csv = os.path.join(base_path, 'test_x_train.csv')
 val_csv = os.path.join(base_path, 'test_x_valid.csv')
-
 mxrecord = os.path.join(base_path, 'test_x_train.mxrecords')
 mxindex = os.path.join(base_path, 'test_x_train.mxindex')
 testdata = os.path.join(base_path, 'testdata')
+template_path = os.path.join(base_path, 'test_x_{}.csv')
+
+
+
 
 def cleanup():
     print('cleaning up')
     os.remove(tr_csv)
     os.remove(val_csv)
     os.remove(mxrecord)
-
     os.remove(mxindex)
 
 
 @pytest.fixture()
 def create_mxrecords():
-    json_labels_to_csv(testdata, output_csv_file=os.path.join(base_path,'test_x_{}.csv'), val_split=0.0, shuffle=False)
+    json_labels_to_csv(testdata, output_csv_file=template_path, val_split=0.0, shuffle=False)
     df = pd.read_csv(tr_csv)
 
     fns = [a.split(os.sep)[-1] for a in list(glob.glob(os.path.join(base_path, 'testdata/*.jpg')))]
@@ -39,7 +41,8 @@ def create_mxrecords():
 
 @pytest.fixture()
 def detgen_instance():
-    csv_file = os.path.join(base_path,'test_x_{}.csv')
+    csv_file = os.path.join(base_path, template_path)
+
     json_labels_to_csv(testdata, output_csv_file=csv_file, val_split=0.0, shuffle=False)
     df = pd.read_csv(tr_csv)
 
@@ -58,7 +61,3 @@ def detgen_instance():
     yield g
 
     cleanup()
-
-
-
-
